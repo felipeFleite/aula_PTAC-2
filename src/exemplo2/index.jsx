@@ -10,6 +10,7 @@ export default function App() {
         const resposta = await fetch('https://jsonplaceholder.typicode.com/photos');
         const dados = await resposta.json();
         setFotos(dados);
+
     }
     buscarUsuario();
   }, [])
@@ -23,7 +24,7 @@ export default function App() {
           <h2>{produto.title}</h2>
           <p>{produto.albumId}</p>
           <p>{produto.url}</p>
-          <img> src={produto.thumbnailUrl} alt=""</img>
+          <img src={produto.thumbnailUrl} alt={produto.title} width={100} />
           </li>
         ))}
       </ul>

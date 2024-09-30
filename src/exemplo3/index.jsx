@@ -19,7 +19,7 @@ export default function App() {
       <h1>Usuário</h1>
       <ul>
         {
-            //complete o código
+          
         }
       </ul>
     </>
