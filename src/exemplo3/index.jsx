@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 export default function App() {
   
-  const [user,setUser] = useState([]);
-
+  const [user,setUser] = useState();
+''
   useEffect(() => { 
 
     const  procurarUsuario  = async () => {
@@ -19,16 +19,16 @@ export default function App() {
       <h1>Usuário</h1>
       <ul>
          <li>
-            {user?.name.first}
+            {user?.name.title}
          </li>
+         <li>
+            {user?.name.first}
+         </li> 
          <li>
             {user?.name.last}
          </li> 
          <li>
             {user?.gender}
-         </li> 
-         <li>
-            {user?.title}
          </li> 
       </ul>
     </>
