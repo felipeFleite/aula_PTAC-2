@@ -9,7 +9,7 @@ export default function App() {
     const  procurarUsuario  = async () => {
         const resposta = await fetch('https://randomuser.me/api');
         const dados = await resposta.json();
-        setUser(dados)
+        setUser(dados.results[0])
     }
     procurarUsuario();
   }, []);
@@ -18,9 +18,18 @@ export default function App() {
     <>
       <h1>Usuário</h1>
       <ul>
-        {
-          
-        }
+         <li>
+            {user?.name.first}
+         </li>
+         <li>
+            {user?.name.last}
+         </li> 
+         <li>
+            {user?.gender}
+         </li> 
+         <li>
+            {user?.title}
+         </li> 
       </ul>
     </>
   );
